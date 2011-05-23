@@ -16,7 +16,38 @@ db_args		= -adaptor DBI::mysql
  		  -pass pet1Flew
 search options = default +autocomplete
 
-[Steinmetz_PolII_BigWig:database] 
-db_adaptor    = Bio::DB::BigWigSet
-db_args       = -dir /data/gbrowse/Steinmetz_2006_BigWig
+[scproteome:database]
+description     = Saccharomyces cerevisiae Proteome
+db_adaptor      = Bio::DB::SeqFeature::Store
+db_args         = -adaptor DBI::mysql
+                  -dsn dbi:mysql:scproteome;host=localhost;mysql_socket=/db0/mysql/admin/gbrowse/mysql.sock
+                  -user selector
+                  -pass pet1Flew
+search options  = default +autocomplete
 
+### Yeast modENCODE BigWig databases ###
+
+[Field_2008_nucleosome_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Field_2008
+
+[Kaplan_2009_nucleosome_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Kaplan_2009
+
+[Kertesz_PARS_BigWig:database]
+db_adaptor    = Bio::DB::BigWig
+db_args       = -bigwig /data/gbrowse/encode/bigwig/Kertesz_2010/Kertesz_2010_merged_PARS_scores_V64.bw
+                -fasta /data/gbrowse/fasta/V64_2010_05_21.fsa
+
+[Lee_2007_nucleosome_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Lee_2007
+
+[Mayer_2010_RNAP_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Mayer_2010
+
+[Steinmetz_PolII_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Steinmetz_2006
