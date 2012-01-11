@@ -3712,6 +3712,11 @@ sub general_help {
   return shift->globals->url_base."/general_help.html";
 }
 
+## EW added this link for video tutorial help; method called in HTML.pm
+sub tutorial_help {
+    return "http://yeastgenome.org/video_tutorials.shtml#GBT";
+}
+
 sub join_selected_tracks {
     my $self = shift;
     my $state = $self->state;

@@ -131,6 +131,8 @@ END
 
    HELP_WITH_BROWSER     => 'Help with this browser',
 
+   VIDEO_TUTORIAL => 'Video tutorials',  ## EW added for video tutorial link in 'Help' pulldown
+
    HELP_FORMAT_UPLOAD => 'Help with uploading custom tracks',
 
    CANCEL   => 'Cancel',

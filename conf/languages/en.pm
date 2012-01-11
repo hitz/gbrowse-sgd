@@ -127,6 +127,8 @@ END
 
    HELP_WITH_BROWSER     => 'Help with this browser',
 
+   VIDEO_TUTORIAL => 'Video tutorials', ## EW added for Help pulldown to link to video tutorials at SGD
+
    HELP_FORMAT_UPLOAD => 'Help with uploading custom tracks',
 
    CANCEL   => 'Cancel',

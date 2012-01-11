@@ -19,7 +19,6 @@ use constant ANNOTATION_EDIT_ROWS => 25;
 use constant ANNOTATION_EDIT_COLS => 100;
 use constant MAXIMUM_EDITABLE_UPLOAD => 1_000_000; # bytes
 use constant DEBUG => 0;
-
 use constant HAVE_SVG => eval "require GD::SVG; 1";
 our $CAN_PDF;
 
@@ -682,6 +681,12 @@ sub render_actionmenu {
 
     my $help_link     = a({-href=>$self->general_help(),
 			   -target=>'_new'},$self->translate('HELP_WITH_BROWSER'));
+
+    ## added for video tutorial link so it will show up in help pulldown by EW
+
+    my $tutorial_link = a({-href=>$self->tutorial_help(),
+			   -target=>'_new'}, $self->translate('VIDEO_TUTORIAL'));
+
     my $about_gb_link    = a({-onMouseDown => "Controller.show_info_message('about_gbrowse')",
 			   -href        => 'javascript:void(0)',
 			   -style       => 'cursor:pointer'
@@ -718,6 +723,7 @@ sub render_actionmenu {
 		       li({-class=>'dir'},$self->translate('HELP'),
 			  ul({-class=>'dropdown'},
 			     li($help_link),
+			     li($tutorial_link),  ## added video tutorial link to Help pulldown by EW
 			     li({-class=>'divider'},''),
 			     li($about_gb_link),
 			     li($about_dsn_link),
@@ -3042,7 +3048,11 @@ sub track_citation {
     my $title    = div({-style => 'background:gainsboro;padding:5px;font-weight:bold'},$key);
     my $download = a({-href=>"?l=$label;f=save+datafile"},$self->tr('DOWNLOAD_ALL'));
     my $id       = $self->tr('TRACK_ID',$label);
-    return  p(div({-style=>'text-align:center;font-size:small'},$title,$id,"[$download]"),$cit_html);
+    # Commented out by EC so that the default GBrowse download link does not appear and we can put 
+    # a link to the download server in the citation text for each stanza. This also appears in HTML.pm
+    # under blib
+    #return  p(div({-style=>'text-align:center;font-size:small'},$title,$id,"[$download]"),$cit_html);
+    return   p(div({-style=>'text-align:center;font-size:small'},$title,$id),$cit_html);
 }
 
 sub download_track_menu {
@@ -3429,6 +3439,10 @@ sub format_autocomplete {
     my $self     = shift;
     my $features = shift;
     my $partial  = shift;
+    ### Added by EC in accordance to what was suggested by Eric Milliman (ejm32@buffalo.edu)
+    ### on the GBrowse mailing list: http://gmod.827538.n3.nabble.com/Character-escaping-td3137596.html
+    ### to allow tRNA matches to show up in the autocomplete suggestion list in the GBrowse search box.
+    $partial =~ s/([\(\)])/\\$1/g;
     my %names;
     for my $f (@$features) {
 	my ($name) = grep {/$partial/i} ($f->display_name,eval{$f->aliases});

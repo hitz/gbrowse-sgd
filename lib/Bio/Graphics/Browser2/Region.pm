@@ -200,7 +200,11 @@ sub search_db {
   my $args = shift;
   my ($features);
   if (my $name = $args->{-search_term}) {
-      $name =~ tr/a-zA-Z0-9|.'"_*?: ;+-\/\#\[\]//cd;  # remove rude/naughty characters
+      ### Changed by EC from $name =~ tr/a-zA-Z0-9|.'"_*?: ;+-\/\#\[\]//cd; 
+      ### to escape parantheses in tRNA names following personal communication
+      ### with Eric Milliman (ejm32@buffalo.edu) after he reported the same 
+      ### problem with tRNAs not showing up in GBrowse, searching by name
+      $name =~ tr/a-zA-Z0-9|.'"_*?: ;+-\/\#\[\]\(\)//cd;  # remove rude/naughty characters
       my ($ref,$start,$stop,$class,$id) = $self->parse_feature_name($name);
       $features =  $self->lookup_features($ref,$start,$stop,$class,$name,$id);
   }
