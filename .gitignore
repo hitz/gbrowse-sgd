@@ -2,6 +2,7 @@
 Build
 INSTALL.SKIP
 MYMETA.yml
+MYMETA.json
 _build/
 blib/
 lib/Bio/Graphics/Browser2/CAlign.c
@@ -12,3 +13,4 @@ conf/.DS_Store
 conf/gbrowse_conf/#*#
 conf/gbrowse_conf/.#*
 conf/gbrowse_conf/*~
+*~
