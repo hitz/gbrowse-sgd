@@ -6,8 +6,8 @@
     background-color: #D0D0D0;
     color:       black;
 }
-.datatitle        { background-color: khaki; }
-.databody         { background-color: lightgoldenrodyellow; }
+.datatitle        { background-color: white; }
+.databody         { background-color: lightblue; }
 .multiplechoicetitle  { background-color: lightblue;
 		        font-size: small;
 }

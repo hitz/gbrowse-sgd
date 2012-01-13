@@ -12,16 +12,16 @@ table.subtrack-table {
 	font-size: 10pt;
 }
 table.subtrack-table thead th {
-	background-color:lightgoldenrodyellow;
+	background-color:transparent;
 }
 table.subtrack-table tfoot td {
-	background-color:khaki;
+	background-color:transparent;
 }
 
 table.subtrack-table tr.tbody_header {
 	font-weight:bold;
 	text-align:center;
-	background-color:khaki;
+	background-color:transparent;
 }
 
 table.subtrack-table tbody {
@@ -45,7 +45,7 @@ table.subtrack-table a.pagelink {
 	margin:0px 5px 0px 5px;
 }
 table.subtrack-table a.currentpage {
-	background-color:yellow;
+	background-color:lightblue;
 }
 
 /* Striping */
