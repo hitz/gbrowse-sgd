@@ -1,5 +1,6 @@
 @import url('gbrowse_autocomplete.css');
-@import url('http://www.yeastgenome.org/css/Site.css');
+@import url('http://www.yeastgenome.org/css/Site_wp.css');
+@import url('http://www.yeastgenome.org/css/jquery-ui.css');
 
 /* These are basic CSS rules shared by other stylesheets */
 A:link            { text-decoration: none; 
