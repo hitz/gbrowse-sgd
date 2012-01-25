@@ -2,45 +2,51 @@
 
 /* These are frequently-changed options that provide a buttoned-down
    "gray" look */
+
 .activeTrack      { 
     background-color: #D0D0D0;
     color:       black;
 }
-.datatitle        { background-color: white; }
-.databody         { background-color: lightblue; }
+
+.datatitle        { background-color: #D9E2F8; }
+
 .multiplechoicetitle  { background-color: lightblue;
 		        font-size: small;
 }
-.searchtitle      { background-color: #E6EBF0;
+
+.searchtitle      { background-color: #FFFFFF;  /* #E6EBF0; */
 	            font-size: small;
-		    margin-left: 1em
-;		    margin-right: 1em;
+		    margin-left: 1em;
+		    margin-right: 1em;
 }
-.searchbody       { background-color: #E6EBF0;
+
+.searchbody       { background-color:  #FFFFFF;  /* #E6EBF0; */
 	            font-size: small;
 		    margin-left: 1em;
 		    margin-right: 1em;
 		    margin-bottom: 3px;
 }
-.settingstitle    { background-color: #E6EBF0;
+
+.settingstitle    { background-color: #FFFFFF;  /* #E6EBF0; */
 	            font-size: small;
 		    margin-left: 1em;
 }
-.settingsbody     { background-color: #F2F6FA;
+
+.settingsbody     { background-color: #FFFFFF;  /* #F2F6FA;*/
 	            font-size: small;
 		    margin-left: 1em;
 }
-.uploadtitle      { background-color: #E6EBF0;
+.uploadtitle      { background-color: #FFFFFF;  /* #E6EBF0; */
 	            font-size: small;
 		    margin-left: 1em;
 }
-.uploadbody       { background-color: #F2F6FA;
+.uploadbody       { background-color: #DEDEDE; /* #F2F6FA;*/
 	            font-size: small;
 		    margin-left: 1em;
 }
 .tabmenu_active   { cursor: pointer;
 		    color: black;
-		    background-color: #D0D0D0;
+		    background-color: #DEDEDE; /* #D0D0D0; */
 		    font-size: 10pt;
 		    font-weight: bold;
                     font-family: sans-serif;
@@ -64,10 +70,10 @@
     background-color: transparent;
 }
 .tabmenu {
-    background-color: #F0F0F0;
+    background-color: *#F0F0F0;
 }
 .tabbody {
-    background-color: #D0D0D0;
+    background-color: #DEDEDE; /*#D0D0D0;*/
     padding-top: 5px;
 }
 .custom_track {
@@ -129,4 +135,9 @@
 }
 .public_even span.source_note {
     color: #999999;
+}
+
+#TABLE_3 { background-color: #D9E2F8;
+	   margin-left: auto;
+	   margin-right: auto;
 }

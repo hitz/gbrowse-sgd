@@ -16,7 +16,7 @@ IMG.trackimg      {
                        margin-top: -10px;
                        text-align: center;
                   }
-.titlebar         {  background-color: #FFD39B;
+.titlebar         {  background-color: #D9E2F8; /* #FFD39B; */
                      cursor: move;
                      z-index: 10;
                      opacity: 1.0;

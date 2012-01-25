@@ -11,7 +11,7 @@ A:visited         { text-decoration: none;
                   }
 A:hover           { text-decoration: underline; 
 		    color: black;
-		    background:lightsteelblue;
+/*		    background:lightsteelblue; */
                   }
 A.banner          { color  : #FFFFFF;
                     font-size : small;
@@ -20,20 +20,21 @@ A.banner          { color  : #FFFFFF;
 A.bblue           { color: #FFFFFF;
                     background-color: #9999FF;
                     font-size : small;
-                    text-align: center;
+                    text-align: A;
                   }
-A.bred            { color: #FFFFFF;
+center.bred            { color: #FFFFFF;
                     background-color: #FF6666;
                     font-size : small;
                     text-align: center;
 		  }
 .track_title {
     cursor: pointer;
-    color: black;
 }
+
 .track_title:hover {
     background:lightsteelblue;
 }
+
 .favorite {
     font-weight: bold;
 }
@@ -43,10 +44,14 @@ A.bred            { color: #FFFFFF;
 .text_match {
     background-color:yellow;
 }
+
 BODY              { background-color: #F7FBFF;
                     font-family: sans-serif;
 	            font-size: small;
+		    width: 99%;
+		    background-color: #FFFFFF;
                   }
+
 DIV               { margin: 0 }
 H1                { color: navy;
 		    font-size: medium;
@@ -77,8 +82,7 @@ table.padded-table td { padding-left:10px; padding-right:10px}
 TH.linkmenu       { 
                     font-family: sans-serif;
                     padding: 0;
-                    font-size: 9pt;
-                  }
+                    font-size: 9pt;                  }
 span.clickable {
     color: blue;
     cursor: pointer;
@@ -119,12 +123,21 @@ span.tctl         { cursor: pointer }
     padding-left:  5px;
     padding-right: 5px;
 }
-#.activeTrack {
-#    background-color: lightsteelblue;
-#}
+
+.activeTrack {
+    background-color: lightsteelblue;
+}
+
+
 .datatitle {
     height: 25px;
+    width: 100%;
 }
+
+/* ul.dropdown .dir {
+	    color: blue;
+
+
 .menutitle:hover {
     text-decoration: underline;
 }
@@ -141,7 +154,7 @@ img.figure {
     padding-left: 6px;
     padding-right: 6px;
     padding-bottom: 6px;
-    background-color: lightgray;
+    background-color: #FFFFFF; /* lightgray; */
     border: double;
 }
 span.list {

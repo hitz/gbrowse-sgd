@@ -1,8 +1,8 @@
 stylesheet          = css/gbrowse_solid.css
 hilite fill         = #E0E6EE
 hilite outline      = blue
-overview bgcolor    = #F2F6FA
-region bgcolor      = #F2F6FA
-detail bgcolor      = #F2F6FA
+overview bgcolor    = #FFFFFF 
+region bgcolor      = #FFFFFF 
+detail bgcolor      = #FFFFFF 
 grid color          = paleturquoise
 grid major color    = skyblue
