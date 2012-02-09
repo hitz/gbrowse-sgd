@@ -1,8 +1,9 @@
-config_base            = /etc/gbrowse2   # overridden by environment variable GBROWSE_CONF
-htdocs_base            = /Library/WebServer/Documents
+config_base            = /share/vin/www-data/gbrowse2   # overridden by environment variable GBROWSE_CONF
+htdocs_base            = /share/vin/www-data/html/
 url_base               = /gbrowse2
-db_base                = /Library/WebServer/Documents/databases
-tmp_base               = /var/tmp/gbrowse2
+db_base                = /share/vin/www-data/html/gbrowse2/databases
+tmp_base               = /share/vin/www-data/tmp/gbrowse2
+generate pdf           = 0
 
 # If no session driver is set, then GBrowse will pick one for you.
 # It will use db_file for the driver and storable for the serializer
@@ -11,12 +12,12 @@ tmp_base               = /var/tmp/gbrowse2
 # Override driver guessing by setting these options
 # The safest, but slowest session driver...
 #session driver    = driver:file;serializer:default
-#session args      = Directory /share/pinot/www-data/tmp/gbrowse2/sessions
+#session args      = Directory /share/vin/www-data/tmp/gbrowse2/sessions
 
 # to use the berkeley DB driver comment out the previous
 # line and uncomment these two
 #session driver = driver:db_file;serializer:default
-#session args   = FileName /share/pinot/www-data/tmp/gbrowse2/sessions.db
+#session args   = FileName /share/vin/www-data/tmp/gbrowse2/sessions.db
 
 # DBI backend to use for uploaded userdata.
 # The SQLite option is better tested
@@ -28,17 +29,19 @@ tmp_base               = /var/tmp/gbrowse2
 #    mysql> grant create on `userdata\_%`.* to 'www-data'@localhost;
 # note the backquotes around the database name.
 
-# for SQLite
-#userdb_adaptor = DBI::SQLite
+# for mysql
+upload_db_adaptor = DBI::mysql
+upload_db_host    = localhost;mysql_socket=/db0/mysql/admin/gbrowse/mysql.sock
+upload_db_user    = www-data
+upload_db_pass    = mix5Drum
+
+# for SQLite 
+#upload_db_adaptor = DBI::SQLite
 
 # for Berkeleydb
-#userdb_adaptor = berkeleydb
+#upload_db_adaptor = berkeleydb
 
-# for mysql
-#userdb_adaptor = DBI::mysql
-#userdb_host    = localhost
-#userdb_user    = encoder
-#userdb_pass    = yeast6CA
+# user_account_db        = DBI:mysql:gbrowse_login;user=shmoo;password=bark8Elm
 
 ####### User Account Registration Database ######
 # If "user accounts" is true, then we will try to use
@@ -47,7 +50,9 @@ user accounts          = 0
 
 # Path to the database -- you will need to create this database and grant all
 # privileges on it to the indicated user.
-user_account_db        = /Library/WebServer/Documents/databases/users.sqlite
+#
+# Uncomment if using SQLite instead of MySQL
+#user_account_db        = /share/vin/www-data/html/databases/users.sqlite
 
 # What email gateway to use for outgoing registration confirmation messages.
 # The full format is
@@ -59,7 +64,7 @@ user_account_db        = /Library/WebServer/Documents/databases/users.sqlite
 #    username and password may be required by the gateway for authentication
 smtp_gateway           = smtp.gmail.com:465:ssl:authorized_user:authorized_password
 
-## These values are used in the login confirmation message sent during
+# These values are used in the login confirmation message sent during
 # user registration. You may customize
 application_name       = GBrowse
 application_name_long  = The Generic Genome Browser
@@ -67,4 +72,4 @@ email_address          = noreply@gmod.org
 
 # name of the "superuser" who can add public tracks
 admin_account          = admin
-admin_dbs              = /Library/WebServer/Documents/databases/admin_uploads
+admin_dbs              = /share/vin/www-data/html/databases/admin_uploads
