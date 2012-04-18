@@ -76,3 +76,29 @@ db_args       = -dir /data/gbrowse/encode/bigwig/Guillemette_2005
 db_adaptor    = Bio::DB::BigWig
 db_args       = -bigwig /data/gbrowse/encode/bigwig/van_Dijk_2011/van_Dijk_2011_xrn1_vs_WT_log2_ratios_V64.bw
                 -fasta /data/gbrowse/encode/fasta/V64_2010_05_21.fsa
+
+[Ghavi_Helm_2008_PolIII_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Ghavi-Helm_2008
+                -type summary
+
+[Kim_2010_PolII_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Kim_2010
+                -type summary
+
+[Johnson_2011_Yra1_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Johnson_2011a
+                -type summary
+
+[Johnson_2011_Yra1_ChIP_chip_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Johnson_2011b
+                -type summary
+
+[Schulze_2011_histone_BigWig:database]
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/encode/bigwig/Schulze_2011
+                -type summary
+

@@ -3714,7 +3714,7 @@ sub general_help {
 
 ## EW added this link for video tutorial help; method called in HTML.pm
 sub tutorial_help {
-    return "http://yeastgenome.org/video_tutorials.shtml#GBT";
+    return "http://www.yeastgenome.org/help/video-tutorials/gbrowse";
 }
 
 sub join_selected_tracks {
