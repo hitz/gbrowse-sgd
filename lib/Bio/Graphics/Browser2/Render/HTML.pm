@@ -506,7 +506,7 @@ sub render_balloon_settings {
    
         # This creates a Ballon (or Box) object and loads the
         # specified configuration set.
-        $balloon_settings .= "\nvar $balloon = new $bclass;\nBalloonConfig($balloon,'$bstyle')\n";
+        $balloon_settings .= "\nvar $balloon = new $bclass;\nBalloonConfig($balloon,'$bstyle');\n";
 
 	# Image path must be specified
 	$config{images} ||= $default_images;
@@ -2390,7 +2390,7 @@ sub render_ruler_div {
 <script type="text/javascript">
   // <![CDATA[
     createRuler();
-  // ]]>
+  // ]]> 
 </script>
 RULER
 
