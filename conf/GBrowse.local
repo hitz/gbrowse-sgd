@@ -1,8 +1,8 @@
-config_base            = /share/vin/www-data/gbrowse2   # overridden by environment variable GBROWSE_CONF
-htdocs_base            = /share/vin/www-data/html/
+config_base            = /share/pinot/www-data/gbrowse2   # overridden by environment variable GBROWSE_CONF
+htdocs_base            = /share/pinot/www-data/html/
 url_base               = /gbrowse2
-db_base                = /share/vin/www-data/html/gbrowse2/databases
-tmp_base               = /share/vin/www-data/tmp/gbrowse2
+db_base                = /share/pinot/www-data/html/gbrowse2/databases
+tmp_base               = /share/pinot/www-data/tmp/gbrowse2
 generate pdf           = 0
 
 # If no session driver is set, then GBrowse will pick one for you.
@@ -12,12 +12,12 @@ generate pdf           = 0
 # Override driver guessing by setting these options
 # The safest, but slowest session driver...
 #session driver    = driver:file;serializer:default
-#session args      = Directory /share/vin/www-data/tmp/gbrowse2/sessions
+#session args      = Directory /share/pinot/www-data/tmp/gbrowse2/sessions
 
 # to use the berkeley DB driver comment out the previous
 # line and uncomment these two
 #session driver = driver:db_file;serializer:default
-#session args   = FileName /share/vin/www-data/tmp/gbrowse2/sessions.db
+#session args   = FileName /share/pinot/www-data/tmp/gbrowse2/sessions.db
 
 # DBI backend to use for uploaded userdata.
 # The SQLite option is better tested
@@ -52,7 +52,7 @@ user accounts          = 0
 # privileges on it to the indicated user.
 #
 # Uncomment if using SQLite instead of MySQL
-#user_account_db        = /share/vin/www-data/html/databases/users.sqlite
+#user_account_db        = /share/pinot/www-data/html/databases/users.sqlite
 
 # What email gateway to use for outgoing registration confirmation messages.
 # The full format is
@@ -72,4 +72,4 @@ email_address          = noreply@gmod.org
 
 # name of the "superuser" who can add public tracks
 admin_account          = admin
-admin_dbs              = /share/vin/www-data/html/databases/admin_uploads
+admin_dbs              = /share/pinot/www-data/html/databases/admin_uploads
